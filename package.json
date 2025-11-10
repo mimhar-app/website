@@ -3,15 +3,17 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://mimhar.app",
+  "homepage": "https://mimhar-app.github.io/website",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && echo 'mimhar.app' > dist/CNAME"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.5"
