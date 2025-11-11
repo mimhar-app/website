@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import links from '../data/links.json';
 
 const Hero = () => {
   return (
@@ -31,25 +32,27 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <Link 
-                to="/beta" 
+              <a 
+                href={links.external.betaRequest}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center justify-center gap-2"
               >
                 <span>Join Beta</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m0 0l-4-4m4 4l4-4" />
                 </svg>
-              </Link>
+              </a>
               
-              <a 
-                href="#features" 
+              <Link 
+                to={links.routes.learnMore} 
                 className="btn-secondary inline-flex items-center justify-center gap-2"
               >
                 <span>Learn More</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </a>
+              </Link>
             </div>
             
             {/* Stats */}

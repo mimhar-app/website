@@ -1,0 +1,19 @@
+{
+  "routes": {
+    "home": "https://mimhar.app",
+    "learnMore": "/learn-more"
+  },
+  "anchors": {
+    "features": "#features",
+    "download": "#download"
+  },
+  "external": {
+    "betaRequest": "https://bit.ly/4oskRem",
+    "linkedin": "https://bit.ly/4o0fjXG",
+    "instagram": "https://bit.ly/3WPGIQM",
+    "twitter": "https://bit.ly/3WQ1EHw"
+  },
+  "contact": {
+    "email": "mailto:contact@mimhar.app"
+  }
+}

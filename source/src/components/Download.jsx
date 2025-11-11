@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import links from '../data/links.json';
 
 const Download = () => {
   return (
@@ -21,8 +22,10 @@ const Download = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-            <Link 
-              to="/beta" 
+            <a 
+              href={links.external.betaRequest}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group bg-white hover:bg-cream text-brown px-8 py-4 rounded-2xl font-semibold flex items-center gap-3 transition-all duration-300 hover:scale-105 shadow-xl"
             >
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -32,10 +35,10 @@ const Download = () => {
                 <div className="text-lg font-bold">Request Invite</div>
                 <div className="text-xs">Sign up for TestFlight</div>
               </div>
-            </Link>
+            </a>
 
             <Link 
-              to="/about" 
+              to={links.routes.learnMore} 
               className="group bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-semibold flex items-center gap-3 transition-all duration-300 hover:scale-105 shadow-xl border border-white/20"
             >
               <div className="text-left">
